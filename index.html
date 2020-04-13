@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, user-scalable=no, initial scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>#ConArcorEnCasa</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="icon" href="favicon/favicon.png"/>
+    <link rel="stylesheet" href="main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9ae73601a1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Cargando-->
+    <div class="loader"></div>
+
+    <!--Cabecera-->
+    <header id="escaneaQR">
+        <span><img src="./assets/image/header/header_logo.png" id="logo" width="42" height="36"/></span>
+        <span><img src="./assets/image/header/header_1.png" id="img1" width="133" height="11"/></span>
+        <span><img src="./assets/image/header/header_cosmo.png" id="qr" width="70" height="11"/></span>
+    </header> 
+
+<a-scene id="scene" inspector="" 
+    keyboard-shortcuts="enterVR: false; exitVR: false" 
+    screenshot="" 
+    vr-mode-ui="enabled: false" 
+    device-orientation-permission-ui="enabled:  false">
+
+<!--HUEVO 1-->
+<a-assets>
+    <a-asset-item id="egg-obj" src="./assets/model/EggBN/b_negro.obj"></a-asset-item>
+    <a-asset-item id="egg-mtl" src="./assets/model/EggBN/b_negro.mtl"></a-asset-item>
+</a-assets>
+
+<a-entity 
+        id="BonNegro"
+        obj-model="obj: #egg-obj; mtl: #egg-mtl"
+        position="0 0.25 -3.30"  
+        scale="0.3 0.3 0.3"
+        visible="true"
+        metalness="1"
+        animation="property: rotation; to: 0 360 0; dur: 8000; easing: linear; loop: true"
+        > 
+</a-entity>
+
+</a-entity> 
+
+<!--HUEVO 2-->
+<a-assets>
+    <a-asset-item id="egg2-obj" src="./assets/model/EggBB/b_blanco.obj"></a-asset-item>
+    <a-asset-item id="egg2-mtl" src="./assets/model/EggBB/b_blanco.mtl"></a-asset-item>
+</a-assets>
+
+<a-entity 
+        id="BonBlanco"
+        obj-model="obj: #egg2-obj; mtl: #egg2-mtl"
+        position="0 0.24325 -3.27364"  
+        scale="0.3 0.3 0.3"
+        visible= "false"
+        animation="property: rotation; to: 0 360 0; dur: 8000; easing: linear; loop: true"
+        >
+</a-entity>
+
+<!--HUEVO 3-->
+
+<a-assets>
+    <a-asset-item id="egg3-obj" src="./assets/model/EggAC/a_cacao.obj"></a-asset-item>
+    <a-asset-item id="egg3-mtl" src="./assets/model/EggAC/a_cacao.mtl"></a-asset-item>
+</a-assets>
+
+<a-entity 
+        id="Ac"
+        obj-model="obj: #egg3-obj; mtl: #egg3-mtl"
+        position="0 0.24325 -3.27364"  
+        scale="0.3 0.3 0.3"
+        visible= "false"
+        animation="property: rotation; to: 0 360 0; dur: 8000; easing: linear; loop: true"
+        >
+</a-entity>
+
+<!--HUEVO 4-->
+
+<a-assets>
+    <a-asset-item id="egg4-obj" src="./assets/model/EggAM/a_mousse.obj"></a-asset-item>
+    <a-asset-item id="egg4-mtl" src="./assets/model/EggAM/a_mousse.mtl"></a-asset-item>
+</a-assets>
+
+<a-entity 
+        id="Am"
+        obj-model="obj: #egg4-obj; mtl: #egg4-mtl"
+        position="0 0.24325 -3.27364"  
+        scale="0.3 0.3 0.3"
+        visible= "false"
+        animation="property: rotation; to: 0 360 0; dur: 8000; easing: linear; loop: true"
+        >
+</a-entity>
+
+<!--MESA-->
+
+<a-assets>
+    <a-asset-item id="table-obj" src="./assets/model/table/TablaMaderaobj.obj"></a-asset-item>
+    <a-asset-item id="table-mtl" src="./assets/model/table/TablaMaderaobj.mtl"></a-asset-item>
+</a-assets>
+
+<a-entity 
+        obj-model="obj: #table-obj; mtl: #table-mtl"
+        position="0 .3 -3.5"  
+        scale="0.4 0.4 0.4"
+        visible= "true"
+        >
+</a-entity>
+<a-entity camera="" 
+        position="0 1.6 0" 
+        wasd-controls="" 
+        rotation="0 -0.4379562043794486 0" 
+        look-controls="enabled: false; hmdEnabled: false; touchEnabled: false" 
+        aframe-injected="" 
+        data-aframe-inspector-original-camera="">
+</a-entity>
+
+<!--LUCES-->
+
+<a-light type="ambient" color="#e3e3e3"></a-light>
+
+<a-light type="spot" color="#e3e3e3" light="angle: 20; intensity: 0.2; castShadow: true" rotation="-15 0 0" position="1.2 3.2 3" visible=""></a-light>
+<a-light type="spot" color="#e3e3e3" light="angle: 20; intensity: 0.2; castShadow: true" visible="" position="-1.2 3.2 3" rotation="-15 0 0"></a-light>
+
+</a-scene>
+
+<section id="pantalla1">
+    <div id="container"> 
+            <span><img src="./assets/image/txtFelices.png" id="txtFelices" width="200" height="40" /></span>
+            
+            <!--A-Frame-->
+            
+            <input type = "button" id = "right" value = "" onclick="derecha()">
+     
+            <input type = "button" id = "left" value = "" onclick="izquierda()">
+
+
+            <div id="siguiente">
+            <input type="button" id = "next" value="SELECCIONA TU REGALO">
+            </div>
+    </div>
+</section>
+
+<section id="pantalla2">
+    <div id="container">
+        <span><img src="./assets/image/txtFelices.png" id="txtFelices" width="200" height="40" /></span>
+        <div id="sumate"></div>
+        <h2 id = "atractivo">Seleccionar</br>
+            Atractivo</h2>
+        
+        <div id = "frases">         
+            <h3 id = "oracion1" >¡QUE ESTE DÍA SE LLENE DE FELICIDAD!</h3>
+            <h3 id = "oracion2" >¡QUE TENGAS MUY FELICES PASCUAS!</h3>
+            <h3 id = "oracion3" >QUEDANDOTE EN CASA SIEMPRE ES MEJOR</h3>
+            <h3 id = "oracion4" >¡SEPARADOS, PERO UNIDOS A LA DISTANCIA!</h3>
+            <h3 id = "oracion5" >¡QUE TUS SUEÑOS SE HAGAN REALIDAD!</h3>
+        </div>
+
+        <input type = "button" id = "up" value = "" onclick="arriba()">
+        <input type = "button" id = "down" value = "" onclick="abajo()">
+       
+        <div id="siguiente">
+        <input type="button" id = "next2" value="SELECCIONA TU ATRACTIVO">
+        </div>
+    </div>
+
+</section>
+
+<section id="pantalla3">
+    <div id ="container">
+        <span><img src="./assets/image/txtFelices.png" id="txtFelices" width="200" height="40" /></span>
+    </div>
+
+    <div id="siguiente">
+    <input type="button" id = "next3" value="ENVÍA TU REGALO"> <!--Aca tiene que enviar a realidad aumentada-->  
+    </div>
+
+
+    <div id = "enlaces">
+        <a target = "_blank" href="https://www.facebook.com/" ><i id ="fb" class="fab fa-facebook fa-2x"></i></a>
+        <a target = "_blank"href="https://web.whatsapp.com/"><i class="fab fa-whatsapp fa-2x"></i></a>
+        <a ><i id ="link" class="fas fa-link fa-2x"></i></a>
+    </div>
+
+</section>
+
+<section id="pantalla4">
+    <div id ="container">
+
+        <input id="elegida"></input>
+
+            <div id="siguiente">
+            <input type="button" id = "next4" value="ABRE TU REGALO"> <!--Aca tiene que enviar a realidad aumentada-->  
+            </div>
+      
+          <div class="centered-medium" >
+            <img src="assets/image/Regalo.png" id="#regalo" width= "200" height="230">
+          </div>
+         
+    </div>
+</section>
+
+<section id="pantalla5">
+    <div id="iframe">
+        <iframe src="AR.html" width="450px" height="750px" aling="center" border-color="trasparent"></iframe>
+    </div>
+</section>
+
+    <footer id="footer">
+        <h5>Experiencia Realidad Aumentada ARCOR S.A.I.C</br>
+            Desarrollo - Cosmo Games S.A.S</h5>
+    </footer>
+
+        
+
+<script type="text/javascript" src="assets/src/js/selector.js"></script>
+
+<script type="text/javascript">
+    $(window).load(function() {
+        $(".loader").delay(7000).fadeOut("slow");
+    });
+
+    $("#up").click(function(){
+        $("#oracion2").fadeTo("fast", 0)
+        $("#oracion2").fadeTo("fast", 0.1)
+
+        $("#oracion3").fadeTo("fast", 0.6)
+        $("#oracion3").fadeTo("fast", 1)
+
+        $("#oracion4").fadeTo("fast", 0)
+        $("#oracion4").fadeTo("fast", 0.1)
+    })
+
+    $("#down").click(function(){
+        $("#oracion2").fadeTo("fast", 0)
+        $("#oracion2").fadeTo("fast", 0.1)
+
+        $("#oracion3").fadeTo("fast", 0.6)
+        $("#oracion3").fadeTo("fast", 1)
+
+        $("#oracion4").fadeTo("fast", 0)
+        $("#oracion4").fadeTo("fast", 0.1)
+    })
+
+</script>
+
+</body>
+</html>
